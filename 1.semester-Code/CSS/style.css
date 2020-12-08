@@ -1,0 +1,471 @@
+body {
+  height: 100%;
+  padding: 0;
+  margin: auto;
+  background: #f7f7f7;
+  width: 100%;
+}
+
+nav {
+  background: #1d1d1d;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .logo {
+  margin-left: 10px;
+  width: 370px;
+  font-family: "scrivano";
+}
+
+nav .logo a {
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+nav .logo .Logo {
+  margin-top: 37px;
+  margin-bottom: 37px;
+  font-size: 25px;
+}
+
+nav .toggleButton-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: 37px;
+  margin-bottom: 37px;
+}
+
+nav .toggleButton-box .toggleButton {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 45px;
+  height: 28px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav .toggleButton-box .toggleButton .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+nav .show {
+  display: block !important;
+  background: #1d1d1d;
+  z-index: 100;
+}
+
+nav .navbar-links {
+  position: absolute;
+  margin-top: 100px;
+  padding-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
+  display: none;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .navbar-links ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav .navbar-links ul .navbar-hover {
+  padding: 0 20px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+nav .navbar-links ul .navbar-hover li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .navbar-links ul .navbar-hover li a {
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Arial";
+  text-decoration: none;
+}
+
+.navbar-hover:hover {
+  background-color: #ffffff50;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+main .banner {
+  width: 100%;
+  height: 380px;
+  background-image: url("../img/compas.jpg");
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .banner-txt {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  height: 100px;
+}
+
+main .banner-txt h1 {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  main .banner-txt h1 {
+    font-size: 31px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  main .banner-txt h1 {
+    font-size: 33px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .banner-txt h1 {
+    font-size: 36px;
+  }
+}
+
+main h1 {
+  font-family: "Arial";
+  color: #1d1d1d;
+  margin: 0;
+}
+
+main p {
+  font-family: "Arial";
+}
+
+#first-banner-text {
+  background-color: #8c8c8c30;
+}
+
+#second-banner-text {
+  margin-top: 280px;
+}
+
+#second-banner-text h1 {
+  text-align: left;
+  margin-left: 25px;
+  color: #f7f7f7;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 480px) {
+  #second-banner-text h1 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #second-banner-text h1 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #second-banner-text h1 {
+    font-size: 19px;
+  }
+}
+
+#first-titel {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#second-titel {
+  margin-bottom: 10px;
+}
+
+.button-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.button-box button {
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #1d1d1d;
+  color: #C3D1C0;
+  font-family: "Arial";
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-box-shadow: 1px 1px 3px #1d1d1d;
+          box-shadow: 1px 1px 3px #1d1d1d;
+  border: none;
+}
+
+@media screen and (min-width: 480px) {
+  .button-box button {
+    font-size: 31px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .button-box button {
+    font-size: 33px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .button-box button {
+    font-size: 36px;
+  }
+}
+
+.button-box .aroow {
+  width: 70px;
+  height: auto;
+}
+
+.timeline-text {
+  text-align: center;
+}
+
+.timeline-text h1 {
+  color: #591A15;
+  font-size: 16px;
+}
+
+.timeline-text p {
+  color: #1d1d1d;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.timeline {
+  max-width: 1200px;
+  margin: 0 12%;
+  position: relative;
+}
+
+.timeline .right {
+  left: 50%;
+}
+
+.timeline .left {
+  left: 0;
+}
+
+.timeline .left .content {
+  margin-left: -50px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.timeline .left .content img {
+  width: 190px;
+  height: 110px;
+  margin-left: -20px;
+}
+
+.timeline .container {
+  padding: 10px 0 0 25px;
+  position: relative;
+  width: 50%;
+  height: 167px;
+}
+
+.timeline .container .content {
+  font-family: "Arial";
+  border: 1px red;
+  padding-top: 10px;
+}
+
+.timeline .container .content h2 {
+  font-size: 14px;
+}
+
+.timeline .container .content p {
+  font-size: 11px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #1d1d1d;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: -17px;
+  width: 25px;
+  height: 25px;
+  background: black;
+  border-radius: 50%;
+  background: #591A15;
+}
+
+.right::after {
+  left: -13.5px;
+}
+
+.left::after {
+  right: 13.5px;
+}
+
+.right::before {
+  content: '';
+  height: 2px;
+  width: 95%;
+  position: absolute;
+  top: 26px;
+  left: -7px;
+  background: #591A15;
+}
+
+.left::before {
+  content: '';
+  height: 2px;
+  width: 95%;
+  position: absolute;
+  top: 26px;
+  right: 35px;
+  background: #591A15;
+}
+
+/* dark-mode*/
+.btn-toggleBox {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin-top: -30px;
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.btn-toggleBox {
+  margin-right: 10px;
+}
+
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #121212;
+}
+
+.banner.dark-theme {
+  --text-color: #F5DEB3;
+  --bkg-color: #3d3d3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --text-color: #eee;
+    --bkg-color: #121212;
+  }
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #CCC9C9;
+  }
+  .footer-content.light-theme {
+    --text-color: white;
+  }
+  .banner.dark-theme {
+    --text-color: #1d1d1d;
+    --bkg-color: #3d3d3d;
+  }
+  .contact-container1.light-theme {
+    --text-color: #1d1d1d;
+  }
+  .Intor-container.light-theme {
+    --text-color: white;
+  }
+}
+/*# sourceMappingURL=style.css.map */
