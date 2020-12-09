@@ -91,7 +91,7 @@ nav{
     
     .logo {
             margin-left: 10px;
-            width: 370px;
+            width: 400px;
             font-family: map-get($font, primary);
 
             a{
@@ -191,8 +191,9 @@ nav{
     right: 10px;
     select{
         background-color:map-get($color, primary);
+        color: map-get($color, secondary);
         option{
-            color: #f7f7f7;
+            color: map-get($color, secondary);
         }
     }
 }
@@ -489,6 +490,72 @@ audio{
     margin: 20px 10px;
     background:map-get($color, tertiary);
 }
+
+footer{
+    background:map-get($color, primary);
+    color:map-get($color, secondary) ;
+    font-family: map-get($font, secondary);
+    font-size: 12px;
+    width: 100%;
+    height: 540px;
+
+    .footer-seperation{
+      content: '';
+      width: 95%;
+      height: 2px;
+      margin: 20px 10px;
+      background:map-get($color, quinary);
+    }
+
+    .section{
+        margin: 0 10px;
+        ul{
+            list-style: none; 
+            margin: 20px 0;
+            padding: 0;
+            a{
+                text-decoration: none;
+                color:map-get($color, secondary);
+            }
+            li{
+               font-weight: bold;
+               padding-bottom: 10px;
+               display: flex;
+               align-items: center;
+               img{
+                   width: 20px;
+                   height: 20px;
+                   margin-left: 10px;
+               }
+            }
+        }
+    }
+
+    a:hover{
+        background-color: #ffffff50;
+    }
+
+    .first{
+        padding-top: 20px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        img{
+        margin-bottom: 20px;
+        width: 150px;
+        height: auto;
+        }
+    }
+
+    .fourth{
+        img{
+        width: 60px;
+        height: auto;
+        margin-top: 10px;
+        }
+    }
+    
+}
   
 
 
@@ -516,7 +583,6 @@ audio{
   .btn-toggleBox{
       margin-left: 10px;
   }
-
 
   body.dark-theme {
     --text-color: #eee;
