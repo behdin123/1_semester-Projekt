@@ -2,10 +2,11 @@ body {
   height: 100%;
   padding: 0;
   margin: auto;
-  background: #f7f7f7;
+  background: #D4D4D4;
   width: 100%;
 }
 
+/*Mobile (Navigation) (START)*/
 nav {
   background: #1d1d1d;
   height: auto;
@@ -133,6 +134,56 @@ nav .navbar-links ul .navbar-hover li a {
   text-decoration: none;
 }
 
+/*Mobile (Navigation) (FINISH)*/
+/*Break point - desktop (Navigation) (START)*/
+@media only screen and (min-width: 700px) {
+  nav .logo {
+    margin-left: 8%;
+  }
+  nav .toggleButton {
+    display: none !important;
+  }
+  nav .navbar-links {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    margin: 0 !important;
+    height: 104px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav .navbar-links ul {
+    margin-right: 8%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav .navbar-links ul #last-child {
+    padding-right: 0 !important;
+  }
+  nav .contain {
+    right: 8%;
+  }
+  .btn-toggleBox {
+    margin-left: 8% !important;
+  }
+  .navbar-hover ul :last-child {
+    padding-right: 0;
+  }
+  .banner-txt h1 {
+    margin-left: 8% !important;
+  }
+  .banner {
+    height: 800px !important;
+    background-position: center !important;
+  }
+}
+
 .contain {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,6 +213,8 @@ nav .navbar-links ul .navbar-hover li a {
   background-color: #ffffff50;
 }
 
+/*Break point - desktop (Navigation) (FINISH)*/
+/*Mobile version (Banner) (START)*/
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,9 +229,7 @@ main {
 main .banner {
   width: 100%;
   height: 380px;
-  background-image: url("../img/compas.jpg");
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
+  background-image: url("../img/sea3.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -233,16 +284,17 @@ main p {
 }
 
 #second-banner-text {
-  margin-top: 240px;
+  margin-top: 205px;
   padding-top: 40px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, #8c8c8c50), to(transparent));
-  background: linear-gradient(to top, #8c8c8c50 60%, transparent);
+  width: 55%;
+  background: -webkit-gradient(linear, center, color-stop(60%, #ffffff71), to(transparent));
+  background: linear-gradient(to center, #ffffff71 60%, transparent);
 }
 
 #second-banner-text h1 {
   text-align: left;
   margin-left: 10px;
-  color: #f7f7f7;
+  color: #1d1d1d;
   font-size: 16px;
   line-height: 1.3;
 }
@@ -268,13 +320,63 @@ main p {
 
 #first-titel {
   margin-top: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 #second-titel {
-  margin-bottom: 10px;
+  margin-bottom: 22px;
 }
 
+/*Mobile version (Banner) (FINISH)*/
+/*Brake point - Desktop (for banner - first section) (START) */
+@media only screen and (min-width: 700px) {
+  #second-banner-text {
+    margin-top: 353px;
+    padding-top: 40px;
+    margin-left: 8%;
+    background: -webkit-gradient(linear, center, color-stop(60%, #ffffff71), to(transparent));
+    background: linear-gradient(to center, #ffffff71 60%, transparent);
+  }
+  #second-banner-text h1 {
+    text-align: left;
+    margin-left: 0 !important;
+    color: #1d1d1d;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-width: 480px) {
+  #second-banner-text h1 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-width: 700px) {
+  #second-banner-text h1 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-width: 1024px) {
+  #second-banner-text h1 {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #first-titel {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  #second-titel {
+    margin-bottom: 75px;
+  }
+}
+
+/*Brake point - Desktop (for banner - first section) (FINISH) */
+/* Mobile (Button style) (START) */
 .button-box {
   width: 100%;
   display: -webkit-box;
@@ -337,6 +439,15 @@ main p {
   height: auto;
 }
 
+/* Mobile (Button style) (FINISH) */
+/*Brake point - Desktop (Button style) (START) */
+@media only screen and (min-width: 700px) {
+  .button {
+    font-size: 25px !important;
+  }
+}
+
+/* Mobile (Time-line) (START) */
 .timeline-text {
   text-align: center;
 }
@@ -462,10 +573,70 @@ main p {
   background: #1d1d1d;
 }
 
+/* Mobile (Time-line) (FINISH) */
+/* Breakpoint - desktop (Time-line) (START) */
+@media only screen and (min-width: 700px) {
+  .timeline-text h1 {
+    font-size: 30px;
+  }
+  .timeline-text p {
+    font-size: 20px;
+  }
+  .timeline img {
+    width: 300px;
+    height: 300px;
+  }
+  .timeline .left {
+    left: 0;
+  }
+  .timeline .left .content {
+    margin-left: -50px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .timeline .left .content .timeline-image-container {
+    width: 100%;
+  }
+  .timeline .left .content .timeline-image-container img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .timeline .container {
+    height: 550px !important;
+  }
+  .timeline .container .content {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .timeline .container .content h2 {
+    font-size: 25px !important;
+  }
+  .timeline .container .content p {
+    font-size: 18px !important;
+  }
+}
+
+/* Breakpoint (Time-line) (FINISH) */
+/* Mobile (section number 2 & articels) (START) */
 .background-img {
   background-image: url("../img/sea1.jpg");
   width: 100%;
-  height: 350px;
+  height: 550px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -549,6 +720,59 @@ audio {
   background: #591A15;
 }
 
+/* Mobile (section number 2 & articels) (FINISH) */
+/* Breakpoint - desktop (section number 2 & articels) (START) */
+@media only screen and (min-width: 700px) {
+  .section-break {
+    width: 84%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .Articel-section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .articles {
+    margin: 0 8%;
+    width: 60%;
+  }
+  .articles .button-img {
+    margin: 0 0 0 0;
+  }
+  .articles .button-img img {
+    width: 300px;
+    height: 300px;
+    margin-top: -60px;
+  }
+  .articles .content {
+    font-size: 14px;
+    line-height: 65.6px;
+    width: 80%;
+  }
+  .articles .content p {
+    margin: 0;
+  }
+  .articles .titel h1 {
+    font-size: 20px;
+  }
+}
+
+/* Breakpoint - desktop (section number 2 & articels) (FINISH) */
+/* Mobile (Footer) (START) */
 footer {
   background: #1d1d1d;
   color: #f7f7f7;
@@ -626,6 +850,15 @@ footer .fourth img {
   margin-top: 10px;
 }
 
+/* Mobile (Footer) (FINISH) */
+/* Breakpoint - desktop (Footer) (START) */
+@media only screen and (min-width: 700px) {
+  footer {
+    margin-top: 100px;
+  }
+}
+
+/* Breakpoint - desktop (Footer) (FINISH) */
 /* dark-mode*/
 .btn-toggleBox {
   position: absolute;
