@@ -78,9 +78,25 @@ body{
 
 
 /*Mobile (Navigation) (START)*/
+
+.header-top{
+    background: #1d1d1d;
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+    position: absolute;
+    z-index: 100;
+    top: 65px;
+    padding-bottom: 10px;
+}
+
 nav{
     background: #1d1d1d;
-    height: auto;
+    height: 65px;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -92,28 +108,36 @@ nav{
     
     .logo {
             margin-left: 10px;
-            width: 400px;
+            width: 450px;
             font-family: map-get($font, primary);
 
             a{
                 color: map-get($color, secondary);
-                text-decoration: none
+                text-decoration: none;
+                height: 65px;
+                display: flex;
+                align-items: center;
+                img{
+                    width: 55px;
+                    height: 65;
+                }
+                h1{
+                    margin-left: 10px;
+                }
             
             }
 
             .Logo{
-            margin-top: 37px;
-            margin-bottom: 37px;
             font-size: 25px;
             }
         }
 
         .toggleButton-box{
-            width: 100%;
+            width: 26%;
             display: flex;
             justify-content: flex-end;
             margin-right: 10px;
-            margin-top: 37px;
+            margin-top: 17px;
             margin-bottom: 37px;
             
             .toggleButton {
@@ -142,7 +166,7 @@ nav{
     }
     .navbar-links{
         position: absolute;
-        margin-top: 100px;
+        margin-top: 65px;
         padding-top: 0;
         margin-right: 0;
         margin-left: 0;
@@ -157,10 +181,10 @@ nav{
             margin: 0;
             
             .navbar-hover{
-            padding: 0 20px 0 10px;
+            padding: 0 20px;
             display: flex;
             align-items: center;
-            height: 60px;
+            height: 65px;
 
             
                 li  {
@@ -184,6 +208,24 @@ nav{
 /*Break point - desktop (Navigation) (START)*/
 @media only screen and (min-width: 700px) {
 
+    .header-top{
+        background: #D4D4D4;
+        height: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        bottom: 0px;
+        left: 0px;
+        padding-top: 10px;
+        position: relative;
+        z-index: 100;
+        top: 0;
+    }
+
+    .btn-toggleBox{
+        margin-left: 8% !important;
+    }
+
     
     nav{
         .logo{
@@ -195,24 +237,21 @@ nav{
         .navbar-links{
             display: flex !important;
             margin: 0 !important;
-            height: 104px;
             justify-content: flex-end;
             ul{
                 margin-right: 8%;
                 display: flex;
-                height: 100%;
+                height: 65px;
                 align-items: center;
                 #last-child{
-                    padding-right: 0 !important;
+                    padding-right: 21px !important;
                 }
             }
         }
-        .contain{
-            right: 8%;
-        }
-        
     }
-
+.contain{
+            right: 8% !important;
+        }
     .btn-toggleBox{
             margin-left: 8% !important;
         }
@@ -229,28 +268,12 @@ nav{
     .banner{
         height: 800px !important;
         background-position: center !important;
+        
     }
 
 }
 
-.contain{
-    display: flex;
-    position: absolute;
-    margin-top: 75px;
-    z-index: 10;
-    color: #f7f7f7; 
-    font-family: map-get($font, secondary);
-    width: 100%;
-    justify-content: flex-end;
-    right: 10px;
-    select{
-        background-color:map-get($color, primary);
-        color: map-get($color, secondary);
-        option{
-            color: map-get($color, secondary);
-        }
-    }
-}
+
 
 .navbar-hover{
     &:hover, &:active {
@@ -261,7 +284,24 @@ nav{
 /*Break point - desktop (Navigation) (FINISH)*/
 
 
-
+.contain{
+    display: flex;
+    position: absolute;
+    margin-top: 0;
+    right: 10px;
+    z-index: 10;
+    color: #f7f7f7; 
+    font-family: map-get($font, secondary);
+    width: 100%;
+    justify-content: flex-end;
+    select{
+        background-color:map-get($color, primary);
+        color: map-get($color, secondary);
+        option{
+            color: map-get($color, secondary);
+        }
+    }
+}
 
 
 /*Mobile version (Banner) (START)*/
@@ -274,7 +314,7 @@ main{
     .banner{
         width: 100%;
         height: 380px;
-        background-image: url("../img/sea3.jpg");
+        background-image: url("../img/sea34.jpg");
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -309,11 +349,10 @@ main{
 }  
 
 #first-banner-text{
-    background: linear-gradient(#ffffff71 60%, transparent);
     padding-bottom: 50px;
 }
 #second-banner-text{
-    margin-top: 205px;
+    margin-top: 235px;
     padding-top: 40px;
     width: 55%;
     background: linear-gradient(to center, #ffffff71 60%, transparent);
@@ -323,17 +362,17 @@ main{
         text-align: left;
         margin-left: 10px;
         color: map-get($color, primary);
-        @include font-size($p-font-sizes);
+        font-size: 14px;;
     }
 }
 
 #first-titel{
-    margin-top: 30px;
-margin-bottom: 25px;
+    margin-top: 110px;
+margin-bottom: 5px;
 }
 
 #second-titel{
-margin-bottom: 22px;
+margin-bottom: 15px;
 }
 /*Mobile version (Banner) (FINISH)*/
 
@@ -355,14 +394,28 @@ margin-bottom: 22px;
             @include font-size($p-font-sizes);
         }
     }
+
+    #first-banner-text{
+        margin-top: 288px;
+    }
     
     #first-titel{
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     }
     
     #second-titel{
-    margin-bottom: 75px;
+    margin-bottom: 20px;
+    }
+
+    #second-banner-text{
+        margin-top: 445px;
+        h1{
+            text-align: left;
+            margin-left: 10px;
+            color: map-get($color, primary);
+            @include font-size($p-font-sizes);
+        }
     }
 }
 /*Brake point - Desktop (for banner - first section) (FINISH) */
@@ -380,6 +433,7 @@ margin-bottom: 22px;
     .button{
         width: 150px;
         height: 50px;
+        margin-top: 50px;
         border-radius: 25px;
         background-color:map-get($color, primary);
         color:map-get($color, quaternary);
@@ -399,12 +453,18 @@ margin-bottom: 22px;
     }
 }
 
+.button:hover{
+    background-color: lightgray;
+    color: map-get($color , primary)
+}
+
 /* Mobile (Button style) (FINISH) */
 
 /*Brake point - Desktop (Button style) (START) */
 @media only screen and (min-width: 700px){
     .button{
         font-size: 25px !important;
+        
     }
 }
 
@@ -416,6 +476,7 @@ margin-bottom: 22px;
         h1{
         color:map-get($color, tertiary);
         font-size: 16px;
+        margin-top: -20px !important;
     }
         p{
         color:map-get($color, primary);
@@ -459,11 +520,15 @@ margin-bottom: 22px;
         position: relative;
         width: 50%;
         height: 167px;
+
+        .content:hover{
+            background-color: #C3D1C0;
+        }
         
         .content{
             font-family: map-get($font, secondary);
             border: 1px red;
-            padding-top: 10px;
+            margin-top: 18px;
             h2{
                 font-size: 14px;   
             }
@@ -507,7 +572,7 @@ margin-bottom: 22px;
 .right::before{
     content: '';
     height: 2px;
-    width: 95%;
+    width: 101%;
     position: absolute;
     top: 26px;
     left: -7px;
@@ -517,7 +582,7 @@ margin-bottom: 22px;
 .left::before{
     content: '';
     height: 2px;
-    width: 95%;
+    width: 98%;
     position: absolute;
     top: 26px;
     right: 35px;
@@ -533,17 +598,17 @@ margin-bottom: 22px;
     .timeline-text{
     
             h1{
-            font-size: 30px;
+            font-size: 25px;
         }
             p{
-            font-size: 20px;
+            font-size: 18px;
         }    
     }
 
     .timeline{
         img{
-            width: 300px;
-            height: 300px;
+            width: 200px;
+            height: 200px;
         }
 
         .left{
@@ -566,15 +631,15 @@ margin-bottom: 22px;
 
 
     .container{
-        height: 550px !important;
+        height: 320px !important;
         .content{
             display: flex !important;
             flex-direction: column;
             h2{
-                font-size: 25px !important;   
+                font-size: 23px !important;   
             }
             p{
-                font-size: 18px !important;
+                font-size: 16px !important;
             }
         }
     }
@@ -612,6 +677,9 @@ audio{
         }
         .voice{
             margin-top: 5px;
+            img:hover{
+                opacity: 0.5;
+            }
             img{
             width: 35px;
             height: 30px;
@@ -622,7 +690,7 @@ audio{
         font-family: map-get($font, secondary);
         font-size: 14px;
         color:map-get($color, primary);
-        line-height: 22.4px;
+        line-height: 22.4px !important;
         
         
         
@@ -681,12 +749,12 @@ audio{
             img{
                 width: 300px;
                 height: 300px;
-                margin-top: -60px;
+                margin-top: 0;
             }
         }
         .content{
             font-size: 14px;
-            line-height: 65.6px;
+            line-height: 23.4pt !important;
             width: 80%;
             p{
                 margin: 0;
@@ -764,80 +832,188 @@ footer{
         height: auto;
         margin-top: 10px;
         }
+        a{
+         height: 0 !important;
+         display: inline-block;
+        }
     }
 }
 /* Mobile (Footer) (FINISH) */
   
-/* Breakpoint - desktop (Footer) (START) */
-@media only screen and (min-width: 700px){
-footer{
-    margin-top: 100px;
-}
 
-}
+/* Breakpoint - desktop (Footer) (START) */
+
+@media only screen and (min-width: 700px){
+
+    footer{
+        margin-top: 100px;
+        height: 250px;
+        display: flex;
+        justify-content: space-between;
+
+        .footer-seperation{
+            width: 2px;
+            height: 80%;
+            
+        }
+        .section{
+            margin: 20px 0;
+            ul{
+                li:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+            .first{
+                width: 322px;
+                padding-top: 0;
+                margin-left: 8%;
+            }
+            .second{
+                width: 173px;
+            }
+            .fourth{
+                margin-right: 8%;
+                img:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
 
 /* Breakpoint - desktop (Footer) (FINISH) */
 
 
 
-
-
-
-/* dark-mode*/
+/* dark-mode (START)*/
 .btn-toggleBox{
     position: absolute;
     width: 6em;
     height: auto;
     border-radius: 25px;
     text-align: center;
-    margin-top: -30px;
+    margin-top: 0;
     display: block;
-    justify-content: flex-end;
     background-color:map-get($color, secondary);
     color:map-get($color, primary);
     font-family: map-get($font, secondary);
+    margin-left: 10px;
+  }
+  .btn-toggleBox:hover{
+    background-color:map-get($color, primary);
+    color:map-get($color, secondary);
   }
 
-  .btn-toggleBox{
-      margin-left: 10px;
-  }
+/* dark-mode (Finish)*/
 
-  body.dark-theme {
-    --text-color: #eee;
-    --bkg-color: #121212;
-  }
 
-  .banner.dark-theme{
-    --text-color: #F5DEB3;
-    --bkg-color: #3d3d3d;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    /* defaults to dark theme */
-    body {
-      --text-color: #eee;
-      --bkg-color: #121212;
-    }
-    body.light-theme {
-      --text-color: #222;
-      --bkg-color: #CCC9C9;
+
+/* dark-mode - desktop (START)*/
+
+@media only screen and (min-width: 700px){
+    .btn-toggleBox{
+        background-color:map-get($color, primary);
+        color:map-get($color, secondary);
     }
 
-    .footer-content.light-theme{
-      --text-color: white;
-    }
+    .btn-toggleBox:hover{
+        background-color:map-get($color, secondary);
+        color:map-get($color, primary);
+      }
+}
 
-    .banner.dark-theme{
-        --text-color: #1d1d1d;
-        --bkg-color: #3d3d3d;
-    }
+/* dark-mode - desktop (FINISH)*/
 
-    .contact-container1.light-theme{
-        --text-color: #1d1d1d;
-    } 
+
+
+/* Second page (Billedgalleri) /  (START)*/
+  .page-header{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+    font-family: map-get($font, secondary);
+    h1{
+        
+        font-size: 16px;
+        font-style: unset;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    b{
+        font-size: 12px;
+    }
+}
+
+  .gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 3% 10%;
+ }
+ 
+ .gallery img {
+     transition: 1s;
+     margin-bottom: 10%;
+     
+ }
+ 
+ .gallery img:hover{
+     filter: saturate(30%) contrast(1.2);
+     transform: scale(1.1) ;
+ }
+ 
+ 
+ [class*="image"]{
+     width: 100%;
+ }
+
+/* Second page (Billedgalleri) /  (FINISH)*/
+
+
+/* Second page - desktop (Billedgalleri) /  (Start)*/
+@media only screen and (min-width: 700px){
+    .page-header{
+        h1{
+            
+            font-size: 25px;
+        }
+        b{
+            font-size: 16px;
+        }
+    }
     
-    .Intor-container.light-theme{
-    --text-color: white;
-   }
+    [class*="image"]{
+        width: 30%;
+    }
+}
+/* Second page - desktop (Billedgalleri) /  (FINISH)*/
 
-  }
+
+
+/* Third page (Inforgraphic) - mobile version /  (Start)*/
+.Info-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+    .inforgraphic{
+        width: 100%;
+        height: auto;
+    }
+}
+/* Third page (Inforgraphic) - mobile version /  (FINISH)*/
+
+
+
+/* Third page (Inforgraphic) - desktop /  (Start)*/
+@media only screen and (min-width: 700px){
+    .Info-container{
+        .inforgraphic{
+            width: 70%;
+        }
+    }
+}
+/* Third page (Inforgraphic) - desktop /  (FINISH)*/

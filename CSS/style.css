@@ -7,9 +7,28 @@ body {
 }
 
 /*Mobile (Navigation) (START)*/
+.header-top {
+  background: #1d1d1d;
+  height: 25px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  bottom: 0px;
+  left: 0px;
+  padding-top: 20px;
+  position: absolute;
+  z-index: 100;
+  top: 65px;
+  padding-bottom: 10px;
+}
+
 nav {
   background: #1d1d1d;
-  height: auto;
+  height: 65px;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -29,23 +48,37 @@ nav {
 
 nav .logo {
   margin-left: 10px;
-  width: 400px;
+  width: 450px;
   font-family: "scrivano";
 }
 
 nav .logo a {
   color: #f7f7f7;
   text-decoration: none;
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo a img {
+  width: 55px;
+  height: 65;
+}
+
+nav .logo a h1 {
+  margin-left: 10px;
 }
 
 nav .logo .Logo {
-  margin-top: 37px;
-  margin-bottom: 37px;
   font-size: 25px;
 }
 
 nav .toggleButton-box {
-  width: 100%;
+  width: 26%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +86,7 @@ nav .toggleButton-box {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-right: 10px;
-  margin-top: 37px;
+  margin-top: 17px;
   margin-bottom: 37px;
 }
 
@@ -91,7 +124,7 @@ nav .show {
 
 nav .navbar-links {
   position: absolute;
-  margin-top: 100px;
+  margin-top: 65px;
   padding-top: 0;
   margin-right: 0;
   margin-left: 0;
@@ -109,14 +142,14 @@ nav .navbar-links ul {
 }
 
 nav .navbar-links ul .navbar-hover {
-  padding: 0 20px 0 10px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
+  height: 65px;
 }
 
 nav .navbar-links ul .navbar-hover li {
@@ -137,6 +170,26 @@ nav .navbar-links ul .navbar-hover li a {
 /*Mobile (Navigation) (FINISH)*/
 /*Break point - desktop (Navigation) (START)*/
 @media only screen and (min-width: 700px) {
+  .header-top {
+    background: #D4D4D4;
+    height: 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 10px;
+    position: relative;
+    z-index: 100;
+    top: 0;
+  }
+  .btn-toggleBox {
+    margin-left: 8% !important;
+  }
   nav .logo {
     margin-left: 8%;
   }
@@ -148,7 +201,6 @@ nav .navbar-links ul .navbar-hover li a {
     display: -ms-flexbox !important;
     display: flex !important;
     margin: 0 !important;
-    height: 104px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -158,16 +210,16 @@ nav .navbar-links ul .navbar-hover li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100%;
+    height: 65px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   nav .navbar-links ul #last-child {
-    padding-right: 0 !important;
+    padding-right: 21px !important;
   }
-  nav .contain {
-    right: 8%;
+  .contain {
+    right: 8% !important;
   }
   .btn-toggleBox {
     margin-left: 8% !important;
@@ -184,12 +236,18 @@ nav .navbar-links ul .navbar-hover li a {
   }
 }
 
+.navbar-hover:hover, .navbar-hover:active {
+  background-color: #ffffff50;
+}
+
+/*Break point - desktop (Navigation) (FINISH)*/
 .contain {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  margin-top: 75px;
+  margin-top: 0;
+  right: 10px;
   z-index: 10;
   color: #f7f7f7;
   font-family: "Arial";
@@ -197,7 +255,6 @@ nav .navbar-links ul .navbar-hover li a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  right: 10px;
 }
 
 .contain select {
@@ -209,11 +266,6 @@ nav .navbar-links ul .navbar-hover li a {
   color: #f7f7f7;
 }
 
-.navbar-hover:hover, .navbar-hover:active {
-  background-color: #ffffff50;
-}
-
-/*Break point - desktop (Navigation) (FINISH)*/
 /*Mobile version (Banner) (START)*/
 main {
   display: -webkit-box;
@@ -229,7 +281,7 @@ main {
 main .banner {
   width: 100%;
   height: 380px;
-  background-image: url("../img/sea3.jpg");
+  background-image: url("../img/sea34.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -278,13 +330,11 @@ main p {
 }
 
 #first-banner-text {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #ffffff71), to(transparent));
-  background: linear-gradient(#ffffff71 60%, transparent);
   padding-bottom: 50px;
 }
 
 #second-banner-text {
-  margin-top: 205px;
+  margin-top: 235px;
   padding-top: 40px;
   width: 55%;
   background: -webkit-gradient(linear, center, color-stop(60%, #ffffff71), to(transparent));
@@ -295,36 +345,16 @@ main p {
   text-align: left;
   margin-left: 10px;
   color: #1d1d1d;
-  font-size: 16px;
-  line-height: 1.3;
-}
-
-@media screen and (min-width: 480px) {
-  #second-banner-text h1 {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  #second-banner-text h1 {
-    font-size: 17px;
-    line-height: 1.4;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  #second-banner-text h1 {
-    font-size: 19px;
-  }
+  font-size: 14px;
 }
 
 #first-titel {
-  margin-top: 30px;
-  margin-bottom: 25px;
+  margin-top: 110px;
+  margin-bottom: 5px;
 }
 
 #second-titel {
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 }
 
 /*Mobile version (Banner) (FINISH)*/
@@ -366,12 +396,44 @@ main p {
 }
 
 @media only screen and (min-width: 700px) {
+  #first-banner-text {
+    margin-top: 288px;
+  }
   #first-titel {
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   #second-titel {
-    margin-bottom: 75px;
+    margin-bottom: 20px;
+  }
+  #second-banner-text {
+    margin-top: 445px;
+  }
+  #second-banner-text h1 {
+    text-align: left;
+    margin-left: 10px;
+    color: #1d1d1d;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-width: 480px) {
+  #second-banner-text h1 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-width: 700px) {
+  #second-banner-text h1 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+}
+
+@media only screen and (min-width: 700px) and (min-width: 1024px) {
+  #second-banner-text h1 {
+    font-size: 19px;
   }
 }
 
@@ -396,6 +458,7 @@ main p {
 .button-box .button {
   width: 150px;
   height: 50px;
+  margin-top: 50px;
   border-radius: 25px;
   background-color: #1d1d1d;
   color: #C3D1C0;
@@ -439,6 +502,11 @@ main p {
   height: auto;
 }
 
+.button:hover {
+  background-color: lightgray;
+  color: #1d1d1d;
+}
+
 /* Mobile (Button style) (FINISH) */
 /*Brake point - Desktop (Button style) (START) */
 @media only screen and (min-width: 700px) {
@@ -455,6 +523,7 @@ main p {
 .timeline-text h1 {
   color: #591A15;
   font-size: 16px;
+  margin-top: -20px !important;
 }
 
 .timeline-text p {
@@ -509,10 +578,14 @@ main p {
   height: 167px;
 }
 
+.timeline .container .content:hover {
+  background-color: #C3D1C0;
+}
+
 .timeline .container .content {
   font-family: "Arial";
   border: 1px red;
-  padding-top: 10px;
+  margin-top: 18px;
 }
 
 .timeline .container .content h2 {
@@ -556,7 +629,7 @@ main p {
 .right::before {
   content: '';
   height: 2px;
-  width: 95%;
+  width: 101%;
   position: absolute;
   top: 26px;
   left: -7px;
@@ -566,7 +639,7 @@ main p {
 .left::before {
   content: '';
   height: 2px;
-  width: 95%;
+  width: 98%;
   position: absolute;
   top: 26px;
   right: 35px;
@@ -577,14 +650,14 @@ main p {
 /* Breakpoint - desktop (Time-line) (START) */
 @media only screen and (min-width: 700px) {
   .timeline-text h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .timeline-text p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .timeline img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
   .timeline .left {
     left: 0;
@@ -612,7 +685,7 @@ main p {
     display: flex;
   }
   .timeline .container {
-    height: 550px !important;
+    height: 320px !important;
   }
   .timeline .container .content {
     display: -webkit-box !important;
@@ -624,10 +697,10 @@ main p {
             flex-direction: column;
   }
   .timeline .container .content h2 {
-    font-size: 25px !important;
+    font-size: 23px !important;
   }
   .timeline .container .content p {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -671,6 +744,10 @@ audio {
   margin-top: 5px;
 }
 
+.articles .titel .voice img:hover {
+  opacity: 0.5;
+}
+
 .articles .titel .voice img {
   width: 35px;
   height: 30px;
@@ -680,7 +757,7 @@ audio {
   font-family: "Arial";
   font-size: 14px;
   color: #1d1d1d;
-  line-height: 22.4px;
+  line-height: 22.4px !important;
 }
 
 .articles .button-img {
@@ -756,11 +833,11 @@ audio {
   .articles .button-img img {
     width: 300px;
     height: 300px;
-    margin-top: -60px;
+    margin-top: 0;
   }
   .articles .content {
     font-size: 14px;
-    line-height: 65.6px;
+    line-height: 23.4pt !important;
     width: 80%;
   }
   .articles .content p {
@@ -850,68 +927,180 @@ footer .fourth img {
   margin-top: 10px;
 }
 
+footer .fourth a {
+  height: 0 !important;
+  display: inline-block;
+}
+
 /* Mobile (Footer) (FINISH) */
 /* Breakpoint - desktop (Footer) (START) */
 @media only screen and (min-width: 700px) {
   footer {
     margin-top: 100px;
+    height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .footer-seperation {
+    width: 2px;
+    height: 80%;
+  }
+  footer .section {
+    margin: 20px 0;
+  }
+  footer .section ul li:hover {
+    opacity: 0.5;
+  }
+  footer .first {
+    width: 322px;
+    padding-top: 0;
+    margin-left: 8%;
+  }
+  footer .second {
+    width: 173px;
+  }
+  footer .fourth {
+    margin-right: 8%;
+  }
+  footer .fourth img:hover {
+    opacity: 0.5;
   }
 }
 
 /* Breakpoint - desktop (Footer) (FINISH) */
-/* dark-mode*/
+/* dark-mode (START)*/
 .btn-toggleBox {
   position: absolute;
   width: 6em;
   height: auto;
   border-radius: 25px;
   text-align: center;
-  margin-top: -30px;
+  margin-top: 0;
   display: block;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   background-color: #f7f7f7;
   color: #1d1d1d;
   font-family: "Arial";
-}
-
-.btn-toggleBox {
   margin-left: 10px;
 }
 
-body.dark-theme {
-  --text-color: #eee;
-  --bkg-color: #121212;
+.btn-toggleBox:hover {
+  background-color: #1d1d1d;
+  color: #f7f7f7;
 }
 
-.banner.dark-theme {
-  --text-color: #F5DEB3;
-  --bkg-color: #3d3d3d;
+/* dark-mode (Finish)*/
+/* dark-mode - desktop (START)*/
+@media only screen and (min-width: 700px) {
+  .btn-toggleBox {
+    background-color: #1d1d1d;
+    color: #f7f7f7;
+  }
+  .btn-toggleBox:hover {
+    background-color: #f7f7f7;
+    color: #1d1d1d;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  /* defaults to dark theme */
-  body {
-    --text-color: #eee;
-    --bkg-color: #121212;
+/* dark-mode - desktop (FINISH)*/
+/* Second page (Billedgalleri) /  (START)*/
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Arial";
+}
+
+.page-header h1 {
+  font-size: 16px;
+  font-style: unset;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.page-header b {
+  font-size: 12px;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 3% 10%;
+}
+
+.gallery img {
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-bottom: 10%;
+}
+
+.gallery img:hover {
+  -webkit-filter: saturate(30%) contrast(1.2);
+          filter: saturate(30%) contrast(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+[class*="image"] {
+  width: 100%;
+}
+
+/* Second page (Billedgalleri) /  (FINISH)*/
+/* Second page - desktop (Billedgalleri) /  (Start)*/
+@media only screen and (min-width: 700px) {
+  .page-header h1 {
+    font-size: 25px;
   }
-  body.light-theme {
-    --text-color: #222;
-    --bkg-color: #CCC9C9;
+  .page-header b {
+    font-size: 16px;
   }
-  .footer-content.light-theme {
-    --text-color: white;
-  }
-  .banner.dark-theme {
-    --text-color: #1d1d1d;
-    --bkg-color: #3d3d3d;
-  }
-  .contact-container1.light-theme {
-    --text-color: #1d1d1d;
-  }
-  .Intor-container.light-theme {
-    --text-color: white;
+  [class*="image"] {
+    width: 30%;
   }
 }
+
+/* Second page - desktop (Billedgalleri) /  (FINISH)*/
+/* Third page (Inforgraphic) - mobile version /  (Start)*/
+.Info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.Info-container .inforgraphic {
+  width: 100%;
+  height: auto;
+}
+
+/* Third page (Inforgraphic) - mobile version /  (FINISH)*/
+/* Third page (Inforgraphic) - desktop /  (Start)*/
+@media only screen and (min-width: 700px) {
+  .Info-container .inforgraphic {
+    width: 70%;
+  }
+}
+
+/* Third page (Inforgraphic) - desktop /  (FINISH)*/
 /*# sourceMappingURL=style.css.map */
