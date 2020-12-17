@@ -107,7 +107,7 @@ nav{
 
     
     .logo {
-            margin-left: 15px;
+            margin-left: 10px;
             width: 450px;
             font-family: map-get($font, primary);
 
@@ -122,7 +122,7 @@ nav{
                     height: 65;
                 }
                 h1{
-                    margin-left: 15px;
+                    margin-left: 10px;
                 }
             
             }
@@ -136,7 +136,7 @@ nav{
             width: 26%;
             display: flex;
             justify-content: flex-end;
-            margin-right: 15px;
+            margin-right: 10px;
             margin-top: 17px;
             margin-bottom: 37px;
             
@@ -168,7 +168,8 @@ nav{
         position: absolute;
         margin-top: 65px;
         padding-top: 0;
-        right: 0;
+        margin-right: 0;
+        margin-left: 0;
         width: 100%;
         display: none;
         text-align: center;
@@ -236,9 +237,7 @@ nav{
         .navbar-links{
             display: flex !important;
             margin: 0 !important;
-            width: 0;
             justify-content: flex-end;
-            right: 122px;
             ul{
                 margin-right: 8%;
                 display: flex;
@@ -332,7 +331,7 @@ main{
 
         h1{
             @include font-size($h1-font-sizes);
-            margin-left: 15px;
+            margin-left: 10px;
         }
     }
 
@@ -359,7 +358,7 @@ main{
 
     h1{
         text-align: left;
-        margin-left: 15px;
+        margin-left: 10px;
         color: map-get($color, primary);
         font-size: 14px;;
     }
@@ -411,7 +410,7 @@ margin-bottom: 15px;
         margin-top: 445px;
         h1{
             text-align: left;
-            margin-left: 15px;
+            margin-left: 10px;
             color: map-get($color, primary);
             @include font-size($p-font-sizes);
         }
@@ -498,7 +497,7 @@ margin-bottom: 15px;
         left: 50%;
         img{
             float: right;
-            margin-right: 15px;
+            margin-right: 14px;
         }
     }
 
@@ -648,13 +647,15 @@ margin-bottom: 15px;
 
 
 /* Mobile (section number 2 & articels) (START) */
-.background-img{
+.background-img::before{
     background-image: url("../img/sea1.jpg");
     width: 100%;
     height: 550px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
+    z-index: -10;
 }
 
 audio{
@@ -663,7 +664,7 @@ audio{
 
 
 .articles{
-    margin: 20px 15px;
+    margin: 20px 10px;
     .titel{
         display: flex;
         justify-content: space-between;
@@ -717,7 +718,7 @@ audio{
     content: '';
     width: 95%;
     height: 2px;
-    margin: 20px 15px;
+    margin: 20px 10px;
     background:map-get($color, tertiary);
 }
 /* Mobile (section number 2 & articels) (FINISH) */
@@ -725,10 +726,6 @@ audio{
 
 /* Breakpoint - desktop (section number 2 & articels) (START) */
 @media only screen and (min-width: 700px){
-    .background-img{
-        background-image: url("../img/sea1.jpg");
-        background-attachment: fixed;
-    }
     .section-break{
         width: 84%;
         margin-left: 8%;
@@ -778,18 +775,18 @@ footer{
     font-family: map-get($font, secondary);
     font-size: 12px;
     width: 100%;
-    height: 560px;
+    height: 540px;
 
     .footer-seperation{
       content: '';
       width: 95%;
       height: 2px;
-      margin: 20px 15px;
+      margin: 20px 10px;
       background:map-get($color, quinary);
     }
 
     .section{
-        margin: 0 15px;
+        margin: 0 10px;
         ul{
             list-style: none; 
             margin: 20px 0;
@@ -806,7 +803,7 @@ footer{
                img{
                    width: 20px;
                    height: 20px;
-                   margin-left: 15px;
+                   margin-left: 10px;
                }
             }
         }
@@ -822,6 +819,7 @@ footer{
         display: flex;
         flex-direction: column;
         img{
+        margin-bottom: 20px;
         width: 150px;
         height: auto;
         }
@@ -832,7 +830,6 @@ footer{
         width: 60px;
         height: auto;
         margin-top: 10px;
-        margin-bottom: 20px;
         }
         a{
          height: 0 !important;
@@ -849,7 +846,7 @@ footer{
 
     footer{
         margin-top: 100px;
-        height: 270px;
+        height: 250px;
         display: flex;
         justify-content: space-between;
 
@@ -870,9 +867,6 @@ footer{
                 width: 322px;
                 padding-top: 0;
                 margin-left: 8%;
-                img{
-                    margin-bottom: 20px;
-                }
             }
             .second{
                 width: 173px;
@@ -902,7 +896,7 @@ footer{
     background-color:map-get($color, secondary);
     color:map-get($color, primary);
     font-family: map-get($font, secondary);
-    margin-left: 15px;
+    margin-left: 10px;
   }
   .btn-toggleBox:hover{
     background-color:map-get($color, primary);
@@ -935,19 +929,19 @@ footer{
   .page-header{
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 50px;
     text-align: center;
     font-family: map-get($font, secondary);
     h1{
         
-        font-size: 18px;
+        font-size: 16px;
         font-style: unset;
         font-weight: bold;
         letter-spacing: 1px;
         text-align: center;
     }
     b{
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -981,7 +975,6 @@ footer{
 /* Second page - desktop (Billedgalleri) /  (Start)*/
 @media only screen and (min-width: 700px){
     .page-header{
-        margin-top: 50px;
         h1{
             
             font-size: 25px;
@@ -1005,15 +998,9 @@ footer{
     justify-content: center;
     margin-top: 50px;
     
-    .inforgraphic1{
-        width: 100%;
-        max-height: 200px;
-    }
-
     .inforgraphic{
         width: 100%;
-        max-height: 620px;
-        margin-bottom: 100px;
+        height: auto;
     }
 }
 /* Third page (Inforgraphic) - mobile version /  (FINISH)*/
@@ -1025,11 +1012,6 @@ footer{
     .Info-container{
         .inforgraphic{
             width: 70%;
-            max-height: 1420px;
-        }
-        .inforgraphic1{
-            width: 70%;
-            max-height: 520px;
         }
     }
 }
